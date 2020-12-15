@@ -10,26 +10,24 @@
 <form asp-action="Add" method="post">
     <div>
         <label asp-for="Situation">Notes on the situation</label>
-        <input asp-for="Situation" class="form-control"/>
+        <input asp-for="Situation" class="form-control" />
     </div>
-
+    <br />
     <div>
         <label asp-for="Effort">Your action</label>
-        <input asp-for="Effort" class="form-control"/>
+        <input asp-for="Effort" class="form-control" />
     </div>
-
+    <br />
     <div>
         <label asp-for="Success">Check this if it was successful</label>
         <input asp-for="Success" class="form-control" />
     </div>
-
+    <br />
     <div>
         <label asp-for="Result">Result of action</label>
-        <input asp-for="Result" class="form-control"/>
+        <input asp-for="Result" class="form-control" />
     </div>
-
     <br />
-
     <div>
         <button type="submit" class="btn btn-secondary">Save</button>
         <a asp-action="Cancel" class="btn btn-secondary">Cancel</a>
