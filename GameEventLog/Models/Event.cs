@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace GameEventLog.Models
 {
@@ -11,18 +7,15 @@ namespace GameEventLog.Models
         public int EventId { get; set; }
         public string Situation { get; set; }
         
-        [Required(ErrorMessage = "Specify what you're going to try.")]
+        [Required(ErrorMessage = "What was your action?")]
         public string Effort { get; set; }
 
         //Roll will go here if we need it
 
-        [Required(ErrorMessage = "Did it work?")]
+        [Required]//Bool is always valid so no ErrorMessage needed
         public bool Success { get; set; }
 
         [Required(ErrorMessage = "What was the result?")]
         public string Result { get; set; }
-
-        //public DateTime DateAdded { get; set; } //App will set this for user
-
     }
 }
