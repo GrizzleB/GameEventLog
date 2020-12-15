@@ -8,9 +8,8 @@ namespace GameEventLog.Migrations
         {
             migrationBuilder.InsertData(
                 table: "Events",
-                columns: new[] { "EventId", "Situation", "Effort", "Success", "Result" },
-                values: new object[] {1,
-                    "We arrived at the dungeon entrance.",
+                columns: new[] { "Situation", "Effort", "Success", "Result" },//removed PK column from these three statements so it doesn't bomb if someone saves an event before using 2nd migration
+                values: new object[] {"We arrived at the dungeon entrance.",
                     "I tried to open the door.",
                     false,
                     "The door seemed to be held shut."
@@ -18,18 +17,16 @@ namespace GameEventLog.Migrations
                 );
             migrationBuilder.InsertData(
                 table: "Events",
-                columns: new[] { "EventId", "Effort", "Success", "Result" },
-                values: new object[] {2,
-                    "We told the door to open.",
+                columns: new[] { "Effort", "Success", "Result" },
+                values: new object[] {"We told the door to open.",
                     true,
                     "After some loud mechanical noises the door swung open."
                     }
                 );
             migrationBuilder.InsertData(
                 table: "Events",
-                columns: new[] { "EventId", "Situation", "Effort", "Success", "Result" },
-                values: new object[] {3,
-                    "We walked inside and a bat flew at my face.",
+                columns: new[] { "Situation", "Effort", "Success", "Result" },
+                values: new object[] {"We walked inside and a bat flew at my face.",
                     "I swing my weapon at the bat.",
                     true,
                     "Bat went splat!"
